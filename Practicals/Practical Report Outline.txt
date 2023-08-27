@@ -1,0 +1,20 @@
+Abstract
+-Summary of the purpose of the report, the methods used and what results were obtained.
+
+Introduction
+-Describe the objective of the lab and a short background of the main components used.
+
+Methodology
+-What steps were done in the lab.
+-Schematic diagram of the circuit built.
+-Flowchart with explanation of the code.
+
+Results & Discussions
+-Code written
+-Explanation on what each part of the code does.
+
+Conclusion
+-Did your program complete the task given?
+
+Reference
+-Textbook
