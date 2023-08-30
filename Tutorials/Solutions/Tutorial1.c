@@ -68,6 +68,7 @@ int main()
     // printf("The product of both values is %d\n",prod);
     // printf("The remainder of both values is %d\n",rmndr);
 
+
 // -----------------------------------------------------------------------------------------------
 
     /* Q4 - Write a program that reads an integer and prints out whether it’s odd or even. */
@@ -89,11 +90,6 @@ int main()
     /* Q5 - Write a program that inputs one five-digit number, separates the number into its individual
     digits and prints the digits separated from one another by three spaces. For example, if the user 
     types in 42139, the program should print 4   2   1   3   9   */
-
-    
-
-    return 0;
-}
 
 
 /*  Q2 - Identify and correct the errors in each of the following statements: 
@@ -123,11 +119,11 @@ int main()
         printf("Enter an integer => ");
         scanf("%d",&c);
 
-        if (a > b) & (a > c){
+        if (a > b) and (a > c){
             printf("The largest integer is 'a'");
         }
 
-        else if(b > a) & (b > c){
+        else if(b > a) and (b > c){
             printf("The largest integer is 'b'"); (ERROR)
         }
 
@@ -135,7 +131,7 @@ int main()
             printf("The largest integer is 'c'");
         }
 
-        (e) printf ( “Remainder of %d divided by %d is \n ”, x, y, x%y );
+        (e) printf(“Remainder of %d divided by %d is \n ”, x, y, x%y );
             
             The operation x%y should be carried out by another variable, not 
             directly executed in the printf line:
