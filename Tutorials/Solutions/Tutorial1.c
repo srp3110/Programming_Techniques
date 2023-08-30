@@ -123,11 +123,11 @@ int main()
         printf("Enter an integer => ");
         scanf("%d",&c);
 
-        if (a > b) & (a > c){
+        if (a > b) and (a > c){
             printf("The largest integer is 'a'");
         }
 
-        else if(b > a) & (b > c){
+        else if(b > a) and (b > c){
             printf("The largest integer is 'b'"); (ERROR)
         }
 
