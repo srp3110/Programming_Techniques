@@ -1,11 +1,7 @@
-    int num;
+    // int x;
+    // int sum = 0;
 
-    printf("Enter a number => ");
-    scanf("%d",&num);
-
-    if (num%2 == 0){
-        printf("This is an even number.");
-    }
-    else{
-        printf("This is an odd number.");
-    }
+    // for(x=3; x<=33; x+=2){
+    //     sum += x;
+    // }
+    // printf("Sum is %d", sum);

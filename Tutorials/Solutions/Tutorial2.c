@@ -95,22 +95,22 @@ int main(){
 
     /*Question 5*/
 
-    int X,rem,count;
-    printf("Enter an integer value: ");
-    scanf("%d",&X);
+    // int X,rem,count;
+    // printf("Enter an integer value: ");
+    // scanf("%d",&X);
 
-    count = X-1;
-    while(count>1){
-        rem = X%count;
-        if (rem==0){
-            printf("This is not a prime number");
-            break;
-        }
-        count--;
-    }
-    if (count == 1){
-        printf("PRIME");
-    }
+    // count = X-1;
+    // while(count>1){
+    //     rem = X%count;
+    //     if (rem==0){
+    //         printf("This is not a prime number");
+    //         break;
+    //     }
+    //     count--;
+    // }
+    // if (count == 1){
+    //     printf("PRIME");
+    // }
 
     return 0;
 }
