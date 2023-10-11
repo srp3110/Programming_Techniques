@@ -201,7 +201,7 @@ the first is the multiple of the second */
 
         (a) scanf( “ %d ”, %value ); 
             solution:
-            %value shouold be &value
+            %value should be &value
 
         (b) a+b+c = sum;
             solution:
