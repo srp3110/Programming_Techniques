@@ -1,36 +1,54 @@
 #include <stdio.h>
 
-// Function to update loyalty points based on amount spent
-void updateLoyaltyPoints(int *loyaltyPoints, float amountSpent) {
-    // Update loyalty points based on the amount spent
-    if (amountSpent >= 50.0) {
-        *loyaltyPoints += 5; // Award 5 points for every $50 spent
-        printf("Loyalty points updated successfully.\n");
-    } else {
-        printf("No loyalty points awarded for this purchase.\n");
+#define MAX_ITEMS 50
+#define DISCOUNT_THRESHOLD 100
+
+// Function to calculate total cost with discount
+void calculateTotalCost(float items[], int numItems, float *totalCost, float *discount) {
+    *totalCost = 0.0;
+    *discount = 0.0;
+
+    // Calculate the total cost of items
+    for (int i = 0; i < numItems; ++i) {
+        *totalCost += items[i];
+    }
+
+    // Apply a discount if the total cost exceeds the threshold
+    if (*totalCost > DISCOUNT_THRESHOLD) {
+        *discount = 0.1 * (*totalCost); // 10% discount
+        *totalCost -= *discount;
     }
 }
 
 int main() {
-    int customerID, loyaltyPoints = 0;
-    float amountSpent;
+    int numItems;
+    float items[MAX_ITEMS];
+    float totalCost, discount;
 
-    printf("Welcome to the Grocery Shop Loyalty Program!\n");
+    printf("Welcome to Chen Whey Grocery Shop!\n");
 
-    // Input customer ID and amount spent
-    printf("Enter customer ID: ");
-    scanf("%d", &customerID);
-    printf("Enter the amount spent: $");
-    scanf("%f", &amountSpent);
+    // Input the number of items
+    printf("Enter the number of items: ");
+    scanf("%d", &numItems);
 
-    // Call the function to update loyalty points
-    updateLoyaltyPoints(&loyaltyPoints, amountSpent);
+    // Input the price of each item
+    for (int i = 0; i < numItems; ++i) {
+        printf("Enter the price of item %d: $", i + 1);
+        scanf("%f", &items[i]);
+    }
 
-    // Display the updated loyalty points
-    printf("\nCustomer ID: %d\n", customerID);
-    printf("Updated Loyalty Points: %d\n", loyaltyPoints);
+    // Call the function to calculate total cost with discount
+    calculateTotalCost(items, numItems, &totalCost, &discount);
 
-    printf("\nThank you for using the Loyalty Program!\n");
+    // Display the results
+    printf("\nTotal Cost: $%.2f\n", totalCost);
+
+    // Display discount if applied
+    if (discount > 0.0) {
+        printf("Discount Applied: $%.2f\n", discount);
+    }
+
+    printf("\nThank you for shopping with Whey Whey!\n");
 
     return 0;
 }
