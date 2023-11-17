@@ -1,17 +1,14 @@
 #include <stdio.h>
 #include <string.h>
 
-// Maximum number of items in the inventory
 #define MAX_ITEMS 50
 
-// Structure to represent an item in the inventory
 struct InventoryItem {
     char name[50];
     float price;
     int quantity;
 };
 
-// Function to manage the inventory
 void manageInventory(struct InventoryItem inventory[], int *numItems) {
     int choice;
 
@@ -19,14 +16,14 @@ void manageInventory(struct InventoryItem inventory[], int *numItems) {
     printf("2. Update item quantity\n");
     printf("3. Display inventory\n");
     printf("4. Exit\n");
-    printf("Enter your choice: ");
+    printf("Enter choice => ");
     scanf("%d", &choice);
 
     switch (choice) {
         case 1:
             // Add new item to the inventory
             if (*numItems < MAX_ITEMS) {
-                printf("Enter the name of the new item: ");
+                printf("Enter the name of the new item => ");
                 scanf("%s", inventory[*numItems].name);
                 printf("Enter the price of %s: $", inventory[*numItems].name);
                 scanf("%f", &inventory[*numItems].price);
@@ -45,12 +42,12 @@ void manageInventory(struct InventoryItem inventory[], int *numItems) {
                 char itemName[50];
                 int updatedQuantity;
 
-                printf("Enter the name of the item: ");
+                printf("Enter the name of the item => ");
                 scanf("%s", itemName);
 
                 for (int i = 0; i < *numItems; i++) {
                     if (strcmp(inventory[i].name, itemName) == 0) {
-                        printf("Enter the new quantity for %s: ", inventory[i].name);
+                        printf("Enter the new quantity for %s => ", inventory[i].name);
                         scanf("%d", &updatedQuantity);
                         inventory[i].quantity = updatedQuantity;
                         printf("Quantity updated for %s.\n", inventory[i].name);
@@ -83,7 +80,7 @@ void manageInventory(struct InventoryItem inventory[], int *numItems) {
             break;
 
         case 4:
-            // Exit the function
+            // Exit function
             printf("Exiting inventory management.\n");
             break;
 
@@ -107,13 +104,13 @@ int main() {
 
         switch (menuChoice) {
             case 1:
-                // Call the function to manage the inventory
+                // Manage inventory
                 manageInventory(inventory, &numItems);
                 break;
 
             case 2:
-                // Exit the program
-                printf("Exiting the program. Thank you!\n");
+                // Exit program
+                printf("Exiting the program. Thank you :>\n");
                 break;
 
             default:
