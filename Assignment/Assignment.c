@@ -25,9 +25,9 @@ void manageInventory(struct InventoryItem inventory[], int *numItems) {
             if (*numItems < MAX_ITEMS) {
                 printf("Enter the name of the new item => ");
                 scanf("%s", inventory[*numItems].name);
-                printf("Enter the price of %s: $", inventory[*numItems].name);
+                printf("Enter the price of %s => RM", inventory[*numItems].name);
                 scanf("%f", &inventory[*numItems].price);
-                printf("Enter the quantity of %s: ", inventory[*numItems].name);
+                printf("Enter the quantity of %s => ", inventory[*numItems].name);
                 scanf("%d", &inventory[*numItems].quantity);
                 (*numItems)++;
                 printf("Item added to the inventory.\n");
@@ -68,11 +68,11 @@ void manageInventory(struct InventoryItem inventory[], int *numItems) {
             if (*numItems > 0) {
                 printf("\nCurrent Inventory:\n");
                 printf("--------------------------------------------------\n");
-                printf("%-20s%-10s%-10s\n", "Item Name", "Price ($)", "Quantity");
+                printf("%-20s%-15s%-10s\n", "Item Name", "Price(RM)", "Quantity");
                 printf("--------------------------------------------------\n");
 
                 for (int i = 0; i < *numItems; i++) {
-                    printf("%-20s%-10.2f%-10d\n", inventory[i].name, inventory[i].price, inventory[i].quantity);
+                    printf("%-20s%-15.2f%-10d\n", inventory[i].name, inventory[i].price, inventory[i].quantity);
                 }
             } else {
                 printf("Inventory is empty.\n");
@@ -99,7 +99,7 @@ int main() {
         printf("\nMain Menu:\n");
         printf("1. Manage Inventory\n");
         printf("2. Exit\n");
-        printf("Enter your choice: ");
+        printf("Enter choice => ");
         scanf("%d", &menuChoice);
 
         switch (menuChoice) {
