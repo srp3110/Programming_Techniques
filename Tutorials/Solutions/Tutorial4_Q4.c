@@ -1,10 +1,7 @@
-/*Question 2 - Write a function that displays a solid rectangle of asterisks whose sides are 
-specified in the integer parameters side1 and side2. For example, if the sides are 4 and 5, 
-the function displays the following:
-    ***** 
-    ***** 
-    ***** 
-    ***** 
+/*Question 4 - Write a function Distance that calculates the
+               distance between two points (x1, y1) and 
+               (x2, y2). All numbers and return values should 
+               be of type double.
 */
 
 #include <stdio.h>

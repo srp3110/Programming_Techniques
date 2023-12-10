@@ -9,6 +9,8 @@ the function displays the following:
 
 #include <stdio.h>
 
+void Disp(int side1, int side2);
+
 int main(){
     int side1, side2;
     printf("Enter side 1: ");
@@ -23,8 +25,8 @@ int main(){
 
 void Disp(int side1, int side2){
     int row, col;
-    for(row=1; row<=51; row++){
-        for(col=1; col<=52; col++){
+    for(row=1; row<=side1; row++){
+        for(col=1; col<=side2; col++){
             printf("*");
         }
         printf("\n");
