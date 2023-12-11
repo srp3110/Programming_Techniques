@@ -141,6 +141,8 @@ struct restaurant
     float cost;
 };
 
+void PrintOut(struct restaurant R[100], int C);
+
 int main(){
     struct restaurant RES[100];
     int count, dec;
@@ -152,7 +154,7 @@ int main(){
         printf("Enter type of food served: ");
         scanf("%s", RES[count].food);
         printf("Enter average cost per person: ");
-        scanf("%s", &RES[count].cost);
+        scanf("%f", &RES[count].cost);
         count++;
 
         printf("Enter 1 to continue, -1 to exit: ");
@@ -163,7 +165,7 @@ int main(){
         }
     }
 
-    void PrintOut(RES, count);
+    PrintOut(RES, count);
 
     return 0;
 }
@@ -173,7 +175,7 @@ void PrintOut(struct restaurant R[100], int C){
     int n, swap;
     while (1){
         swap = 0;
-        for(n=0; n<C; n++){
+        for(n=0; n<C-1; n++){
             if(R[n].cost>R[n+1].cost){
                 temp = R[n];
                 R[n] = R[n+1];
@@ -186,6 +188,7 @@ void PrintOut(struct restaurant R[100], int C){
         }
     }
 
+        printf("\n%-15s %-15s %-15s\n", "Name", "Food", "Cost");
     for(n = 0; n<C; n++){
         printf("%-15s %-15s %-15f\n", R[n].name, R[n].food, R[n].cost);
     }

@@ -1,7 +1,23 @@
-    // int x;
-    // int sum = 0;
+#include <stdio.h>
 
-    // for(x=3; x<=33; x+=2){
-    //     sum += x;
-    // }
-    // printf("Sum is %d", sum);
+struct food
+{
+    char name[15];
+    int portion_weight;
+    int calories;
+};
+
+int main(){
+    struct food meal[10];
+
+    printf("Enter food type: ");
+    scanf("%s", &meal[0].name);
+    printf("Enter portion: ");
+    scanf("%d", &meal[0].portion_weight);
+    printf("Enter calories: ");
+    scanf("%d", &meal[0].calories);
+
+    printf("%s %d %d", meal[0].name, meal[0].portion_weight, meal[0].calories);
+
+    return 0;
+}
